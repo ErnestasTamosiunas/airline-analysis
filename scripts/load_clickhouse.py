@@ -1,7 +1,5 @@
-import os
 import pandas as pd
 from pathlib import Path
-from datetime import datetime
 import traceback
 from clickhouse_connect import get_client
 from scripts.constants import (
@@ -99,7 +97,7 @@ def load_all_csvs():
             print(f"❌ Failed to load {csv_path}: {e}")
             traceback.print_exc()
 
-    print(f"\n📊 Summary:")
+    print("\n📊 Summary:")
 
     print(f"✅ Loaded: {loaded_files} files out of {len(csv_files)}")
     if failed_files:

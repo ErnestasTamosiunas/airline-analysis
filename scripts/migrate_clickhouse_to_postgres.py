@@ -1,5 +1,3 @@
-# scripts/migrate_clickhouse_to_postgres.py
-
 import psycopg2
 import io
 from clickhouse_connect import get_client
