@@ -7,7 +7,6 @@
 ├── docker-compose.yml             # Container orchestration
 ├── Makefile                        # Run project tasks
 ├── poetry.lock / pyproject.toml    # Python environment dependencies
-├── requirements.txt                # Alternative dependency listing
 ├── results/                        # Output directory (if needed)
 ├── scripts/                        # All logic scripts
 │   ├── analyze_columns.py
