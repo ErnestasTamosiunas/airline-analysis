@@ -25,15 +25,15 @@ REQUIRED_COLUMNS = [
 # Clickhouse parameters:
 CLICKHOUSE_HOST = "localhost"
 CLICKHOUSE_PORT = 8123
-CLICKHOUSE_USER = "dev_user"
-CLICKHOUSE_PASSWORD = "dev_pass"
+CLICKHOUSE_USER = "<Enter your CLICKHOUSE user name>"
+CLICKHOUSE_PASSWORD = "<Enter your CLICKHOUSE user password>"
 CLICKHOUSE_TABLE = "flights"
 CLICKHOUSE_DB = "default"
 
 # Postgres parameters:
 POSTGRES_HOST = "localhost"
 POSTGRES_PORT = 5432
-POSTGRES_USER = "ernestastamo"
-POSTGRES_PASSWORD = "password"
+POSTGRES_USER = "<Enter your POSTGRES user name>"
+POSTGRES_PASSWORD = "<Enter your POSTGRES user password>"
 POSTGRES_DBNAME = "flights"
 POSTGRES_TABLE = "flights_migrated"

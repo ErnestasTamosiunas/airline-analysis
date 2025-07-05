@@ -30,13 +30,14 @@
 make init
 ```
 
-### 2. Start services (ClickHouse, Adminer)
+### 2. Start services (ClickHouse)
 
 ```bash
 make up
 ```
 
 ### 3. Retrieve flight dataset
+- This method is super slow so be aware.
 
 ```bash
 make retrieve
@@ -49,12 +50,26 @@ make extract-csvs
 ```
 
 ### 5. Load data into ClickHouse
+- First create a ClickHouse User + Password and grant it basic privileges
+- Example command of connecting to clickhouse client:
+```bash
+docker exec -it <container_id_or_name> clickhouse-client
+```
+- Example command to create a user:
+
+```sql
+:CREATE USER dev_user IDENTIFIED WITH plaintext_password BY 'dev_pass';
+GRANT SELECT, INSERT, ALTER, CREATE, DROP ON *.* TO dev_user;
+```
+- Make sure that your user info inputed within `scripts/constants.py` file for `CLICKHOUSE` prefix specifically
+- Continue with the next Makefile command to load the data
 
 ```bash
 make load-clickhouse
 ```
 
 ### 6. Migrate from ClickHouse to PostgreSQL
+- Add your PostgreSQL user name and password within `scripts/constants.py` file for `POSTGRES` prefix specifically
 
 ```bash
 make migrate-clickhouse-to-postgres
