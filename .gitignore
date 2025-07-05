@@ -1,8 +1,24 @@
+# Ignore virtual environments
 venv/
-__pycache__/
 *.pyc
-.env
-*.zip
-*.csv
+__pycache__/
+
+# Ignore data folders
 data/
-results/query_logs/
+results/
+clickhouse-data/
+
+# Ignore local config
+.python-version
+
+# Ignore dependency caches
+.poetry/
+*.lock
+
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
+
+# Optionally ignore compiled/misc
+*.log
+*.sqlite3
